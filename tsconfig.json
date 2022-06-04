@@ -1,0 +1,33 @@
+{
+  "include": ["**/*"],
+  "exclude": [
+    "webpack.config.js",
+    "babel.config.js",
+    "postcss.config.js",
+    ".stylelintrc.js",
+    ".eslintrc.js",
+    "dist/*.js"
+  ],
+  "compilerOptions": {
+    "sourceMap": true,
+    "baseUrl": ".",
+    "target": "esnext",
+    "module": "esnext",
+    // this enables stricter inference for data properties on `this`
+    "strict": true,
+    "allowJs": true,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "outDir": "./",
+    "paths": {
+      "env": [
+        "env/local.json"
+      ],
+      "utils": [
+        "utils"
+      ]
+    },
+  }
+}
